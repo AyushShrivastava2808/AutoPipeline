@@ -8,7 +8,6 @@ import streamlit as st
 
 API_URL = os.environ.get("API_URL", "http://localhost:8000")
 API_KEY = os.environ.get("API_KEY", "changeme")
-GITHUB_URL = "https://github.com/Hvora2005/mlops-platform"
 
 MODEL_INFO = {
     "logistic_regression": ("trending-up", "Logistic Regression", "A fast, interpretable linear baseline for classification."),
