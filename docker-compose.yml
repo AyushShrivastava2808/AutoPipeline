@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: mlops
       POSTGRES_DB: mlops
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -27,7 +27,7 @@ services:
       - --backend-store-uri=postgresql://mlops:mlops@db:5432/mlops
       - --default-artifact-root=/mlruns
     ports:
-      - "5000:5000"
+      - "5001:5000"
     volumes:
       - ./mlruns:/mlruns
     depends_on:
@@ -51,7 +51,7 @@ services:
       UPLOAD_DIR: /app/data/uploads
       API_KEY: ${API_KEY:?Set API_KEY in .env}
     ports:
-      - "8000:8000"
+      - "8002:8000"
     volumes:
       - ./data/uploads:/app/data/uploads
       - ./mlruns:/mlruns
@@ -76,7 +76,7 @@ services:
       API_URL: http://api:8000
       API_KEY: ${API_KEY:?Set API_KEY in .env}
     ports:
-      - "8501:8501"
+      - "8503:8501"
     depends_on:
       api:
         condition: service_healthy

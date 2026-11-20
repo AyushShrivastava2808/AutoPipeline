@@ -53,11 +53,11 @@ docker compose up --build -d
 
 | Service | Local URL / port |
 | --- | --- |
-| Streamlit | http://localhost:8501 |
-| FastAPI | http://localhost:8000 |
-| FastAPI docs | http://localhost:8000/docs |
-| MLflow | http://localhost:5000 |
-| PostgreSQL | localhost:5432 |
+| Streamlit | http://localhost:8503 |
+| FastAPI | http://localhost:8002 |
+| FastAPI docs | http://localhost:8002/docs |
+| MLflow | http://localhost:5001 |
+| PostgreSQL | localhost:5433 |
 
 ### Windows 11 and WSL2 prerequisites
 

@@ -7,7 +7,7 @@ from app.core.db import Base
 
 
 class Dataset(Base):
-    __tablename__ = "datasets"
+    __tablename__ = "app_datasets"
 
     id = Column(Uuid(as_uuid=True), primary_key=True, default=uuid.uuid4)
     filename = Column(String, nullable=False)
